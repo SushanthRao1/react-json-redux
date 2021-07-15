@@ -56,7 +56,7 @@ export const EditUser = () => {
 
     useEffect(() => {
         dispatch(getSingleUser(id))
-    }, []);
+    }, [id, dispatch]);
 
 
     //to show the existed details
@@ -64,7 +64,7 @@ export const EditUser = () => {
         if (user) {
             setState({ ...user });
         }
-    }, [])
+    }, [user])
     return (
         <div>
             <Button variant="contained" color="secondary" type="submit"
